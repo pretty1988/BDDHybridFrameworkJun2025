@@ -7,6 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.qa.util.ReadProperties;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 /**
  * @author prett
  * This class has common methods to start and close the browser.
@@ -20,8 +22,11 @@ public class Base {
 	 */
 	public WebDriver initializeWebDriver() {
 
-		System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
-		driver = new ChromeDriver();
+//		System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
+//		driver = new ChromeDriver();
+		
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(ReadProperties.implicitWaitTime(), TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get(ReadProperties.getappURL());

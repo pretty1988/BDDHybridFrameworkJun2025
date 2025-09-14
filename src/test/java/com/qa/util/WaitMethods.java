@@ -24,7 +24,7 @@ public class WaitMethods {
 	public static String ELEMENT_TO_BE_VISIBLE = "visibilityOf";
 	public static String STALENESS_OF_ELEMENT = "stalenessof";
 	
-	public void staticWait1(long milisec){
+	public static void staticWait(long milisec){
 		try {
 			Thread.sleep(milisec);
 		} catch (InterruptedException e) {
