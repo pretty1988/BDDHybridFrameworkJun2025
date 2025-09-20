@@ -54,6 +54,8 @@ public class LoginPage {
 		
 	}
 	
+	//Page operation methods
+	
 	/**
 	 * @param userName
 	 * @param userPassword
